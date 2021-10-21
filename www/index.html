@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cocotte 🐣</title>
+    <link rel="icon" href="./oeuf.png" />
+
+    <style media="screen">
+
+      .final {
+          margin: 6.5px;
+          width: 40px;
+          height: 30px;
+          text-align: center;
+          background-color: transparent;
+          border: none;
+          font-size: 17px;
+          transition: all 0.5s linear;
+          cursor: default;
+      }
+
+      .line {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .letter {
+        transition: all 1s linear;
+      }
+
+    </style>
+
+    <!-- COUCOU PETITS TRICHEURS,
+      TU N'ES PAS UN GRAND COMIQUE -->
+
+    <script type="text/javascript">
+      var compteur = 1;
+      var pasTrouve = 0;
+      var compteur2 = 0;
+
+      function show(ele, arg) {
+
+        if (!(ele.id == 'alpha' && ele.style.opacity == '0')) {
+          ele.style.opacity = '1';
+        }
+      }
+
+      function salutation() {
+        var ind = document.getElementById('indice');
+        var txt = document.getElementById('textInd');
+        var inf = document.getElementById('info');
+        if (compteur == 1) {
+          txt.innerHTML = "Je  vous aiderais à travers des bulles numériques qui me permetterons d'interagir avec vous.";
+        } else if (compteur == 2) {
+          txt.innerHTML = "Je vous laisserais bien sûr des temps de reflexions que je  vous indiquerai par 'Pause 🏮'. (Ça veut simplement dire que je me tairai"
+             + " le temps d'une tirade)";
+          inf.innerHTML = "Pause 🏮";
+        } else if (compteur == 3) {
+          ind.style.opacity = 0;
+        } else if (compteur == 4) {
+          ind.style.opacity = 1;
+          txt.innerHTML = "Bien premier indice 🍥";
+          inf.innerHTML = "Clique 💬";
+        } else if (compteur == 5) {
+          txt.innerHTML = "Commencez par cliquer sur le centre de votre écran";
+        } else if (compteur == 6) {
+          txt.innerHTML = "Je vous dit clairement la première étape pour que vous compreniez la magie utilisée en ces lieux.";
+        } else if (compteur == 7) {
+          txt.innerHTML = "Voila, c'est en exercant une simple pression sur un bouton qu'à travers le portail numérique qu'est votre ordinateur " +
+          " la magie peut operer ! ";
+        } else if (compteur == 8) {
+          txt.innerHTML = "Bref ! On voit maintenant un drôle de texte qui me semble vous être familier... Ainsi qu'une sorte de cachet au bas de "
+          + " cette grande stèle.";
+        } else if (compteur == 9) {
+          ind.style.opacity = 1;
+          txt.innerHTML = "Je peux percevoir qu'il faudrait y entrer un nombre à envoyer mais lequel... ";
+        } else if (compteur == 10) {
+          txt.innerHTML = "Peut-être par rapport à la mise en page, aux nombres de lettres, aux lignes... Bonne chance"
+            + " <br><i>*parle moi encore " + (4-pasTrouve) + " fois pour avoir la réponse direct*</i>";
+          inf.innerHTML = "Pause 🏮";
+        } else if (compteur == 11) {
+          ind.style.opacity = 0;
+        } else if (compteur == 12) {
+          ind.style.opacity = 1;
+          txt.innerHTML = "Bravo ! Mais c'est bien sûr 10 ! En effet, il y a 10 caracteres (ponctuation incluse) par lignes";
+          inf.innerHTML = "Clique 💬";
+        } else if (compteur == 13) {
+          txt.innerHTML = "Nous nous retrouvons maintenant avec un alphabet et sa correspondance en nombres...";
+        } else if (compteur == 14) {
+          txt.innerHTML = "On a aussi la traduction des lettres PASCOMMECA en nombres à coté de '?'. Qu'est ce qu'on peut bien faire avec ça ?";
+        } else if (compteur == 15) {
+          ind.style.opacity = 1;
+          txt.innerHTML = "Peut-être attendent-ils que nous entrions une nouvelle traduction à la place des '?'... C'est encore des nombres mais"
+            + " lequelles ?";
+        } else if (compteur == 16) {
+          txt.innerHTML = "Trouvons une methode de calcul qui permetterais de trouver d'autres nombres à partir des nôtres"
+            + " pour ouvrir le cadenat qui est apparut (peut-être que certains ne changeront pas...) !";
+        } else if (compteur == 17) {
+          txt.innerHTML = "Je pense que nous devrions aussi utiliser nos précedents indices comme le 10 par exemple..."
+            + " <br><i>*parle moi encore " + (4-pasTrouve) + " fois pour avoir la réponse direct*</i>";
+          inf.innerHTML = "Pause 🏮";
+        } else if (compteur == 18) {
+          ind.style.opacity = '0';
+        } else if (compteur == 19) {
+          ind.style.opacity = 1;
+          inf.innerHTML = "Clique 💬";
+          txt.innerHTML = "Mais bien-sûr, en additionnant les chiffres des nombres on trouve des valeurs comprises entre 1 et 10.";
+        } else if (compteur == 20) {
+          txt.innerHTML = "C'est certainement lié au faite que chacunes de nos lignes comportent 10 caractères...";
+        } else if (compteur == 21) {
+          txt.innerHTML = "Passons maintenant aux nouveaux elements : les nombres que nous avions trouvé se sont imprimés sur la grande stèle";
+        } else if (compteur == 22) {
+          ind.style.opacity = 1;
+          info.innerHTML = "Clique 💬";
+          txt.innerHTML = "Peut-être veulent-ils que nous nous reconcentrions sur le contenu du message en utilisant les nombres-clés trouvés";
+        } else if (compteur == 23) {
+          txt.innerHTML = "Rappelons nous que les nombres-clés sont tous compris entre 1 et 10 et que les lignes ont une mise en pages "
+            +"particulières..." + " <br><i>*parle moi encore " + (4-pasTrouve) + " fois pour avoir la réponse direct*</i>";
+          inf.innerHTML = "Pause 🏮";
+        } else if (compteur == 24) {
+          ind.style.opacity = '0';
+        } else if (compteur == 25) {
+          ind.style.opacity = 1;
+          inf.innerHTML = "BRAVO 🎉";
+          txt.innerHTML = "On y est ! Vous, tu as enfin réussit ! Et c'est le cas de le dire ;)";
+        }
+
+        if (compteur == 12 && document.getElementById('alpha').style.opacity == '0') {
+          if (pasTrouve >= 3) {
+            pasTrouve = 0;
+            inf.innerHTML = "Clique 💬";
+            txt.innerHTML = "Il y a 10 caractères par lignes regardez ! Heuresement que je réflechit aussi. Entrez donc 10 dans le cachet !";
+          } else {
+            pasTrouve++;
+            compteur = 9;
+            salutation();
+          }
+        } else if (compteur == 19 && compteur2 < 10) {
+          if (pasTrouve >= 3) {
+            pasTrouve = 0;
+            inf.innerHTML = "Clique 💬";
+            txt.innerHTML = "Je pense avoir trouvé. Si on additionne chaques chiffres de chaque nombres ont trouve bien des valeurs de 1 à 10"
+              + ".</br>Je m'explique : 26 = 2 + 6 = 8";
+
+          } else {
+            pasTrouve++;
+            compteur = 15;
+            salutation();
+          }
+        } else if (compteur == 25 && document.getElementById('ultime').style.opacity == '0') {
+          if (pasTrouve >= 3) {
+            pasTrouve = 0;
+            inf.innerHTML = "Clique 💬";
+            txt.innerHTML = "On devrait inspecter chacunes des lettres et voir les réactions qui se produirons. Nous essayerons ensuite de"
+              + " comprendre leur déclenchement (c'est la dernière partie, un peu de courage !).";
+          } else {
+            pasTrouve++;
+            compteur = 22;
+            salutation();
+          }
+        } else {
+          compteur++;
+        }
+      }
+
+      function verif() {
+        var code = document.getElementById('code1').value;
+        if (code == '10') {
+          document.getElementById('alpha').style.opacity = '1';
+          document.getElementById('alpha').style.left = '65%';
+          document.getElementById('code1').disabled = true;
+          compteur = 12;
+          salutation();
+        } else {
+          document.getElementById('code1').value = '';
+        }
+
+      }
+
+      function verif2() {
+        var eles = document.getElementsByClassName('final');
+        var i;
+        var good = ['7', '1', '10', '3', '6', '4', '4', '5', '3', '1'];
+
+        compteur2 = 0;
+        for (i = 0; i<eles.length; i++) {
+          if (eles[i].value != "") {
+            if (eles[i].value == good[i]) {
+              eles[i].style.color = 'green';
+              compteur2++;
+            } else {
+              eles[i].style.color = 'red';
+            }
+          }
+        }
+
+        if (compteur2 >= 10) {
+          for (i = 0; i<eles.length; i++) {
+            eles[i].disabled = true;
+          }
+          document.getElementById('valid2').disabled = true;
+          document.getElementById('valid2').innerHTML = '🔓';
+          document.getElementById('recap').style.opacity = '1';
+          compteur = 19;
+          salutation();
+        }
+
+      }
+
+      function colorLettre(ele) {
+
+        if (document.getElementById('recap').style.opacity == '0') return;
+
+        ele.style.color = 'red';
+        var lets = document.getElementsByClassName('letter');
+        var i;
+
+        for (i = 0; i<lets.length; i++) {
+          if (lets[i].style.color != 'red') return;
+        }
+
+        document.getElementById('ultime').style.opacity = '1';
+        compteur = 25;
+        salutation();
+
+      }
+
+      function easter_egg() {
+        console.log("Bienjoué tu as trouvé l'easter egg de ce site !");
+        console.log("Si tu as la foi, tu peux aussi essayé de trouvé les easter_egg de mes autres sites:");
+        console.log("bigstones.fr");
+        console.log("bigstones.fr/Network");
+        console.log("(Ils sont sur des log différents pour que tu puisses les copier facilement ;D)");
+        // Et voici l'easter egg de l'easter egg hehehe. T'es vraiment un boss de l'avoir trouvé !
+        // Bravo !
+      }
+
+    </script>
+
+  </head>
+  <body style="background-color: #bdc3c7;">
+
+    <!--  NON NE REGARDE PAS _('-_-)_
+      TU DOIS PAS SAVOIR COMME CA
+      TU DOIS CHERCHER, UTILISER TA TETE-->
+
+    <div id="PasCommeCa" style="position: fixed; height: 70%; top: 15%; left: 20%;
+        font-size: 20px; padding: 15px; display: flex; display: flex; flex-direction: column; justify-content: center;
+        text-align: center; ">
+      P<br><br>A<br><br>S<br><br>C<br><br>O<br><br>M<br><br>M<br><br>E<br><br>C<br><br>A
+    </div>
+
+    <div id="Text" style="position: fixed; width: 30%; left: 35%; height: 70%; top: 15%; background-color: #747d8c; font-size: 20px; text-align: center;
+        display: flex; flex-direction: column; justify-content: center; padding: 15px; letter-spacing: 7px; color: #bdc3c7; transition: all 0.5s linear;
+        border-radius: 5px; opacity: 0; z-index: 1; cursor: default;"
+        onclick="show(this)">
+      <div class="line">NeCroi<div class="letter" onclick="colorLettre(this)">t</div>Pas</div> <br>
+      <div class="line"><div class="letter" onclick="colorLettre(this)">A</div>voirGagné</div> <br>
+      <div class="line">SiViteSan<div class="letter" onclick="colorLettre(this)">s</div></div> <br>
+      <div class="line">Le<div class="letter" onclick="colorLettre(this)">R</div>ater.Le</div> <br>
+      <div class="line">Texte<div class="letter" onclick="colorLettre(this)">E</div>stD'</div> <br>
+      <div class="line">Une<div class="letter" onclick="colorLettre(this)">U</div>tilité</div> <br>
+      <div class="line">Nul<div class="letter" onclick="colorLettre(this)">S</div>iOnNit</div> <br>
+      <div class="line">LesE<div class="letter" onclick="colorLettre(this)">s</div>sais.</div> <br>
+      <div class="line">J'<div class="letter" onclick="colorLettre(this)">i</div>magines</div> <br>
+      <div class="line"><div class="letter" onclick="colorLettre(this)">T</div>aSouffran</div>
+
+      <div id="regle1" style="position: absolute; bottom: 0; right: 0; padding: 20px; display: flex; flex-direction: row; justify-content: flex-end;">
+        <input type="text" id="code1" style="width: 40px; height: 40px; border: none; border-radius: 10px 0 0 10px; text-align: center; font-size: 20px;"
+            placeholder="?">
+        <button type="button" style="width: 42px; height: 42px; border: none; border-radius: 0 10px 10px 0; background-color: #f1c40f;
+            transition: 0.5s linear;"
+            onclick="verif()" onmouseenter="this.style.borderRadius = '0 20px 20px 0'" onmouseleave="this.style.borderRadius = '0 10px 10px 0'"
+            >📨</button>
+      </div>
+
+    </div>
+
+    <div id="recap" style="position: fixed; left: 40%; padding: 15px; height: 70%; top: 15%; z-index: 20; transition: all 1s linear; text-align: center;
+        display: flex; flex-direction: column; justify-content: center; font-size: 20px; color: #2f3542; opacity: 0; cursor: default;">
+      7<br><br>1<br><br>10<br><br>3<br><br>6<br><br>4<br><br>4<br><br>5<br><br>3<br><br>1
+    </div>
+
+    <div id="ultime" style="position: fixed; left: 35%; top: 5%; width: 30%; padding: 15px; text-align: center; letter-spacing: 10px;
+        font-size: 20px; transition: all 1s linear; opacity: 0; cursor: default; color: red;">
+       t A s R E U S s i T
+       <div style="font-size: 8px; color: black;"> enfin🐣 </div>
+    </div>
+
+    <div id="alpha" style="position: fixed; width: auto; left: 50%; height: 70%; top: 15%; display: flex; flex-direction: row;
+        justify-content: center; background-color: #ecf0f1; opacity: 0; transition: all 1s linear; border-radius: 0 20px 20px 0;
+        padding: 15px 45px 15px 75px; cursor: default;">
+      <div style="display: flex; flex-direction: column; justify-content: center; font-weight: bold; margin-right: 10px;">
+        <br>A<br>B<br>C<br>D<br>E<br>F<br>G<br>H<br>I<br>J<br>K<br>L<br>M<br>N<br>O<br>P<br>Q<br>R<br>S<br>T<br>U<br>V<br>W<br>X<br>Y<br>Z
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <br>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26
+      </div>
+      <div id="toPCC" style="position: fixed; height: 70%; top: 15%; left: 23%; font-size: 20px; padding: 15px; display: flex; flex-direction: row;
+          justify-content: center; text-align: center; color: #747d8c;">
+        <div class="" style="display: flex; flex-direction: column; justify-content: center; text-align: center;">
+          16
+          <br><br>1
+          <br><br>19
+          <br><br>3
+          <br><br>15
+          <br><br>13
+          <br><br>13
+          <br><br>5
+          <br><br>3
+          <br><br>1
+        </div>
+
+        <div class="" style="display: flex; flex-direction: column; justify-content: center; text-align: center; margin-left: 15px;">
+          <input type="text" class="final" placeholder="?">
+          <input type="text" class="final" placeholder="?">
+          <input type="text" class="final" placeholder="?">
+          <input type="text" class="final" placeholder="?">
+          <input type="text" class="final" placeholder="?">
+          <input type="text" class="final" placeholder="?">
+          <input type="text" class="final" placeholder="?">
+          <input type="text" class="final" placeholder="?">
+          <input type="text" class="final" placeholder="?">
+          <input type="text" class="final" placeholder="?">
+        </div>
+
+        <button type="button" id="valid2" style="position: fixed; right: 65%; top: 80%; width: 42px; height: 42px; border: none;
+            border-radius: 10px 0 0 10px; background-color: #e74c3c; transition: all 0.5s linear; font-size: 20px;"
+            onmouseenter="this.style.borderRadius = '20px 0 0 20px'"
+            onmouseleave="this.style.borderRadius = '10px 0 0 10px'" onclick="verif2()">🔒</button>
+      </div>
+    </div>
+
+    <div id="indice" style="background-color: #ecf0f1; position: fixed; bottom: 22%; right: 4%; width: 15%; height: auto; padding: 15px;
+        border-radius: 5px; transition: all 1s linear; opacity: 1; cursor: default;" onclick="salutation()">
+      <div id="textInd">
+          Bonjour,<br>Je suis ici pour éclairer le chemin qui vous mènera à l'accomplissement de l'énigme.
+      </div>
+
+      <div id="info" style="position: absolute; bottom: 0; right: 2%; font-size: 10px;">
+        Clique 💬
+      </div>
+    </div>
+
+    <img src="./guide.gif" style="position: fixed; bottom: 5%; right: 3%; width: 5%;
+        height: auto; cursor: help;" onclick="salutation()">
+
+  </body>
+</html>
