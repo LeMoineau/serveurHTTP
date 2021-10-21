@@ -1,4 +1,4 @@
-# serveurHTTP
+# serveurHTTP - Cocotte
 serveur HTTP en C et site web mystère "Cocotte"
 
 # Remarque
